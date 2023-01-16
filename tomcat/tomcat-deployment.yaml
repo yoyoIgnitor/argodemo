@@ -3,7 +3,7 @@ kind: Deployment
 metadata:
   name: tomcat-ui
 spec:
-  replicas: 2
+  replicas: 1
   revisionHistoryLimit: 3
   selector:
     matchLabels:
@@ -14,7 +14,7 @@ spec:
         app: tomcat-ui
     spec:
       containers:
-      - image: gkiranch/argodemo:demo-v1
+      - image: gkiranch/argodemo:demo-v2
         name: tomcat-ui
         ports:
         - containerPort: 8080
