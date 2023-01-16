@@ -14,7 +14,7 @@ spec:
         app: tomcat-ui
     spec:
       containers:
-      - image: gkiranch/argodemo:demo-v1
+      - image: gkiranch/argodemo:demo-v2
         name: tomcat-ui
         ports:
         - containerPort: 8080
