@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: tomcat-ui
+spec:
+  replicas: 1
+  revisionHistoryLimit: 3
+  selector:
+    matchLabels:
+      app: tomcat-ui
+  template:
+    metadata:
+      labels:
+        app: tomcat-ui
+    spec:
+      containers:
+      - image: arm64v8/tomcat
+        name: tomcat-ui
+        ports:
+        - containerPort: 8080
